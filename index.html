@@ -43,7 +43,7 @@
       "label": "Cue",
       "conditional_function": {
         "__builderType": "function",
-        "source": "condition === \"discreet\""
+        "source": "rating_condition === \"discreet\""
       }
     },
     {
@@ -66,7 +66,7 @@
       "kind": "trial",
       "plugin": "html-button-response",
       "params": {
-        "stimulus": "<p>{{cue}}</p>\n<p style = \"font-size: 14pt;\">Will the patient recover?</p>",
+        "stimulus": "<p>{{cue}}</p>\n<p style=\"font-size: 14pt;\">Will the patient recover?</p>",
         "choices": [
           "Very unlikely",
           "Very likely"
@@ -77,7 +77,7 @@
       "label": "Cue",
       "conditional_function": {
         "__builderType": "function",
-        "source": "condition === \"discreet\""
+        "source": "rating_condition === \"discreet\""
       }
     },
     {
@@ -144,7 +144,7 @@
       "kind": "trial",
       "plugin": "html-slider-response",
       "params": {
-        "stimulus": "<img src=\"https://firebasestorage.googleapis.com/v0/b/jspsych-builder-5b1cf.firebasestorage.app/o/users%2FEIGahsILLqfUZJBdE0qIgS0hVwi2%2Fimages%2F1762048052189_cloveritolvnotreat.png?alt=media&token=6437366e-11f1-437f-a386-9fd3bcce8961\" alt=\"\" style=\"width: 269px; height: 202px;\"><p><font size=\"5\" color=\"#0056d6\">Cloveritol vs No treatment</font><br></p><p>&nbsp; &nbsp; On a scale from -100% to 100%, rate how effective you think the treatment was compared to having no treatment at all &nbsp;</p><p>&nbsp; &nbsp;<font color=\"#606060\"> &nbsp; NOTE: intermediate negative values indicate the drug actually made recovery worse, whereas intermediate positive values indicate the drug was effective at improving recovery</font></p><p>&nbsp; &nbsp;&nbsp;</p>",
+        "stimulus": "<img src=\"https://firebasestorage.googleapis.com/v0/b/jspsych-builder-5b1cf.firebasestorage.app/o/users%2FEIGahsILLqfUZJBdE0qIgS0hVwi2%2Fimages%2F1762048052189_cloveritolvnotreat.png?alt=media&amp;token=6437366e-11f1-437f-a386-9fd3bcce8961\" alt=\"\" style=\"width: 269px; height: 202px;\"><p><font size=\"5\" color=\"#0056d6\">Cloveritol vs No treatment</font><br></p><p>&nbsp; &nbsp; On a scale from -100% to 100%, rate how effective you think the treatment was compared to having no treatment at all &nbsp;</p><p>&nbsp; &nbsp;<font color=\"#606060\"> &nbsp; NOTE: intermediate negative values indicate the drug actually made recovery worse, whereas intermediate positive values indicate the drug was effective at improving recovery</font></p><p>&nbsp; &nbsp;&nbsp;</p>",
         "labels": [
           "-100 (worsens recovery)",
           "0 (ineffective)",
@@ -198,7 +198,7 @@
       "label": "Cue (Slider)",
       "conditional_function": {
         "__builderType": "function",
-        "source": "condition === \"continuous\""
+        "source": "rating_condition === \"continuous\""
       }
     },
     {
@@ -206,7 +206,7 @@
       "kind": "trial",
       "plugin": "html-slider-response",
       "params": {
-        "stimulus": "<p>{{cue}}</p>\n<p style = \"font-size: 14pt;\">Will the patient recover?</p>",
+        "stimulus": "<p>{{cue}}</p>\n<p style=\"font-size: 14pt;\">Will the patient recover?</p>",
         "labels": [
           "Very unlikely",
           "Even chance",
@@ -232,7 +232,7 @@
       "label": "Cue (Slider)",
       "conditional_function": {
         "__builderType": "function",
-        "source": "condition === \"continuous\""
+        "source": "rating_condition === \"continuous\""
       }
     },
     {
@@ -289,6 +289,26 @@
       },
       "name": "Preload 1",
       "label": "Preload 1"
+    },
+    {
+      "id": "trial-10",
+      "kind": "trial",
+      "plugin": "instructions",
+      "params": {
+        "response_ends_trial": true,
+        "pages": [
+          "<div style=\"padding-left: 50px;\">\n    <div style=\"text-align: left;\">\n      <img style=\"height: 100px; float: right\" src=\"https://usyd-meta-lab.github.io/files/usyd.ico\"></img>\n      <h1>Debrief Statement</h1>\n      <h1 style=\"color:#e1310e\">Research Study: Metacognition and Cognitive Performance</h1>\n      Dr Kit Double (Responsible Researcher)<br>\n      School of Psychology, Faculty of Science<br>\n      Phone: +61 2 8627 8636| Email: kit.double@sydney.edu.au\n    </div>\n    <hr>\n    <div style=\"text-align: left;\">\n      Thank you for completing the research study metacognition and cognitive performance. This study aims to understand how metacognitive self-evaluation affects cognitive performance.<br><br>\n      Self-evaluation involves rating or evaluating your performance in some way. Self-evaluating while performing cognitive tasks (e.g., problem-solving tasks, memory tests) has been shown to affect performance. Generally, self-evaluation has a positive effect on cognitive performance, though this is not always the case. This research is interested in how people change their approach to problem-solving and other cognitive problems as a result of being asked to self-evaluate. <br><br>\n      The study randomly assigned participants to complete a cognitive task either with or without prompting them to self-evaluate (by asking them to provide self-report ratings of their performance). We will assess how performing this self-evaluation affected cognitive performance on the task (i.e. did it improve or impair performance).<br><br>\n      If you have any questions, now or at a later time, please feel free to contact Dr Kit Double (kit.double@sydney.edu.au) <br><br>\n      The ethical aspects of this study have been approved by the Human Research Ethics Committee (HREC) of The University of Sydney [INSERT HREC Approval No. once obtained] according to the National Statement on Ethical Conduct in Human Research (2007).<br><br>\n      If you are concerned about the way this study is being conducted or you wish to make a complaint to someone independent from the study, please contact the University:<br><br>\n      Human Ethics Manager<br>\n      human.ethics@sydney.edu.au<br>\n      +61 2 8627 8176<br>\n      <button onclick=\"window.print();return false;\" />Print</button>\n      <h4 style=\"color:#e1310e; text-align: center;\">This debrief statement is for you to keep</h3>\n    </div>\n    <div style=\"text-align: center;\"></div>\n  </div>"
+        ],
+        "show_clickable_nav": true,
+        "allow_backward": false,
+        "allow_keys": true,
+        "key_forward": "ArrowRight",
+        "key_backward": "ArrowLeft",
+        "button_label_next": "Submit Data for SONA Credit",
+        "button_label_previous": "Previous"
+      },
+      "name": "Debrief",
+      "label": "Debrief"
     }
   ],
   "blocks": [
@@ -433,6 +453,13 @@
       "timeline": [
         "trial-13"
       ]
+    },
+    {
+      "id": "trial-10",
+      "name": "Debrief",
+      "timeline": [
+        "trial-10"
+      ]
     }
   ],
   "options": {
@@ -485,6 +512,8 @@
             hydrated.type = pluginMap[hydrated.type];
           }
           for (const key of Object.keys(hydrated)) {
+            // Skip hydrating function properties to preserve conditional_function
+            if (typeof hydrated[key] === "function") continue;
             hydrated[key] = hydrate(hydrated[key]);
           }
           return hydrated;
@@ -985,7 +1014,34 @@
         ids.forEach(entry => {
           const id = typeof entry === "string" ? entry : entry && typeof entry === "object" ? entry.id : null;
           if (!id) return;
-          results.push(...compileNode(id, map, row, globalVarNames));
+          let compiledNodes = compileNode(id, map, row, globalVarNames);
+          if (!Array.isArray(compiledNodes) || compiledNodes.length === 0) {
+            return;
+          }
+          if (entry && typeof entry === "object") {
+            const conditionalOverride = resolveTimelineFunction(
+              entry.conditional_function ?? entry.conditionalFunction ?? entry.conditional,
+              globalVarNames
+            );
+            if (conditionalOverride) {
+              compiledNodes = compiledNodes.map(node => {
+                const existing = typeof node.conditional_function === "function" ? node.conditional_function : null;
+                const rowData = node._builderRow ?? null;
+                const scopedOverride = rowData ? withRowContext(rowData, conditionalOverride) : conditionalOverride;
+                if (existing) {
+                  node.conditional_function = function (...args) {
+                    const shouldRun = existing.apply(this, args);
+                    if (!shouldRun) return false;
+                    return scopedOverride.apply(this, args);
+                  };
+                } else {
+                  node.conditional_function = scopedOverride;
+                }
+                return node;
+              });
+            }
+          }
+          results.push(...compiledNodes);
         });
         return results;
       }
@@ -1043,7 +1099,17 @@
             rows.forEach(row => {
               const sequence = compileTrialsSequence(block.timeline, map, row, globalVarNames);
               if (!sequence.length) return;
-              const entry = { timeline: sequence };
+              // Wrap each trial with conditional_function in its own timeline
+              const processedSequence = sequence.map(trial => {
+                if (typeof trial.conditional_function === 'function') {
+                  const conditional = trial.conditional_function;
+                  const trialCopy = { ...trial };
+                  delete trialCopy.conditional_function;
+                  return { timeline: [trialCopy], conditional_function: conditional };
+                }
+                return trial;
+              });
+              const entry = { timeline: processedSequence };
               if (repetitions > 1) entry.repetitions = repetitions;
               if (onStartFn) entry.on_timeline_start = withRowContext(row, onStartFn);
               if (onFinishFn) entry.on_timeline_finish = withRowContext(row, onFinishFn);
@@ -1055,15 +1121,27 @@
           if (Array.isArray(block.timeline) && block.timeline.length) {
             const sequence = compileTrialsSequence(block.timeline, map, null, globalVarNames);
             if (!sequence.length) continue;
+            // Wrap each trial with conditional_function in its own timeline
+            const processedSequence = sequence.map(trial => {
+              if (typeof trial.conditional_function === 'function') {
+                // Extract conditional and remove it from trial
+                const conditional = trial.conditional_function;
+                const trialCopy = { ...trial };
+                delete trialCopy.conditional_function;
+                // Return timeline wrapper with conditional
+                return { timeline: [trialCopy], conditional_function: conditional };
+              }
+              return trial;
+            });
             if (repetitions > 1 || onStartFn || onFinishFn || conditionalFn) {
-              const entry = { timeline: sequence };
+              const entry = { timeline: processedSequence };
               if (repetitions > 1) entry.repetitions = repetitions;
               if (onStartFn) entry.on_timeline_start = onStartFn;
               if (onFinishFn) entry.on_timeline_finish = onFinishFn;
               if (conditionalFn) entry.conditional_function = conditionalFn;
               timeline.push(entry);
             } else {
-              timeline.push(...sequence);
+              timeline.push(...processedSequence);
             }
             continue;
           }
